@@ -99,4 +99,4 @@ Penjelasan fitur dan cara kerja aplikasi dapat dilihat melalui link berikut:
 Jika tersedia, Anda dapat mengakses demo aplikasi secara online:
 
 * 
-**Link Demo**: [Masukkan Link Hosting Anda Disini] 
+**Link Demo**: http://mywebinar.kesug.com
