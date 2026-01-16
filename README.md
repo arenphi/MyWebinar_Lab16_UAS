@@ -36,7 +36,7 @@ Projek ini memenuhi syarat UAS Pemrograman Web dengan fungsionalitas penuh mulai
 
 
 * 
-**Otomasi Sertifikat**: Peserta dapat mengunduh sertifikat dalam format PNG/PDF secara otomatis setelah mendaftar.
+**Otomasi Sertifikat**: Peserta dapat mengunduh sertifikat dalam format PNG secara otomatis setelah mendaftar.
 
 
 * **Diskusi Real-time**: Fitur kolom komentar untuk interaksi tanya jawab pada setiap detail webinar.
@@ -51,12 +51,12 @@ Sesuai dengan ketentuan struktur directory lengkap:
 ├── /includes/           # Koneksi database, Header, dan Footer (Modular)
 ├── /models/             # Class PHP untuk implementasi OOP
 ├── /uploads/            # Penyimpanan Poster dan Template Sertifikat
-├── /vendor/fpdf/        # Library untuk generate PDF
+├── /views/              # UI/UX MyWebinar
+    ├── detail.php       # Detail webinar & form pendaftaran
+    ├── login.php        # Autentikasi User & Admin
+    └── unduh_sertifikat.php # Script generate sertifikat otomatis
 ├── .htaccess            # Konfigurasi Clean URL (Routing)
 ├── index.php            # Halaman utama (Beranda)
-├── detail.php           # Detail webinar & form pendaftaran
-├── login.php            # Autentikasi User & Admin
-└── unduh_sertifikat.php # Script generate sertifikat otomatis
 
 ```
 
