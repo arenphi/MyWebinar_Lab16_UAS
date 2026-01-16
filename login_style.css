@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+ :root {
+    --header-height: 3.5rem;
+    /*========== Colors ==========*/
+    --black-color: hsl(220, 24%, 12%);
+    --black-color-light: hsl(220, 24%, 15%);
+    --black-color-lighten: hsl(220, 20%, 18%);
+    --white-color: #fff;
+    --purple-color: #775CA7;
+    --purple-color-light: #8E74C9;
+    --body-color: hsl(220, 100%, 97%);
+    /*========== Font and typography ==========*/
+    --body-font: "Poppins", sans-serif;
+    --normal-font-size: .938rem;
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+
+/* Responsive typography */
+
+@media screen and (min-width: 1024px) {
+     :root {
+        --normal-font-size: 1rem;
+    }
+}
+
+
+/*=============== BASE ===============*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--purple-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+.login__container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    padding-inline: 1.5rem;
+}
+
+.login__form {
+    background-color: var(--white-color);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px hsla(220, 32%, 8%, .1);
+}
+
+.app__name {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #775CA7;
+}
+
+.login__title {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    color: var(--black-color);
+}
+
+.login__group {
+    margin-bottom: 1.25rem;
+}
+
+.login__label {
+    display: block;
+    margin-bottom: .5rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.login__input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 45px !important;
+    border: 2px solid #B7B7B7;
+    border-radius: 24px;
+    outline: none;
+    transition: border .3s;
+}
+
+.login__input:focus {
+    border-color: var(--black-color);
+}
+
+.login__error {
+    color: #e74c3c;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.login__button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--purple-color);
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.login__button:hover {
+    background-color: var(--purple-color-light);
+}
+
+.login__signup {
+    text-align: center;
+    font-size: .8rem;
+    margin-top: 1.5rem;
+}
+
+.login__signup a {
+    color: #775CA7;
+    font-weight: var(--font-semi-bold);
+}
+
+.login__forgot {
+    font-size: .8rem;
+    text-decoration: none;
+    margin-left: auto;
+    color: var(--purple-color);
+}
+
+.login__check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.login__check-group {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.login__check-input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--purple-color);
+    cursor: pointer;
+}
+
+.login__check-label,
+.login__forgot,
+.login__signup a {
+    font-size: 0.8rem;
+}
+
+.login__forgot:hover {
+    text-decoration: underline;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
