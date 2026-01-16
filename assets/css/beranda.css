@@ -1,0 +1,198 @@
+/* Update pada style.css */
+
+
+/* Kontainer Modal */
+
+.modal__title {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.modal__group {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    gap: 10px;
+}
+
+.modal__group_cert {
+    display: none;
+    border: 1px dashed #ccc;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.modal__group_desc {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 8px;
+}
+
+.modal__input-full {
+    width: 100%;
+    padding: 8px;
+}
+
+
+/* Layout Flex dalam Form */
+
+.modal__flex-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.modal__flex-item {
+    flex: 1;
+    width: 100%;
+    padding: 8px;
+}
+
+.ks {
+    flex: 1;
+    width: 100%;
+    padding: 8px;
+}
+
+.modal__upload-box {
+    flex: 1;
+    border: 1px dashed #ccc;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+
+/* Container utama data webinar (Flexbox) */
+
+.webinar__data {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    align-items: flex-start;
+    display: flex !important;
+    flex-direction: row !important;
+    text-align: left;
+}
+
+
+/* Bagian Foto Profil */
+
+.webinar__avatar-container {
+    flex-shrink: 0;
+}
+
+.webinar__avatar-img {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Container Teks */
+
+.webinar__text-container {
+    flex: 1;
+    min-width: 0;
+    /* Mencegah teks meluap dari container flex */
+}
+
+
+/* Judul Webinar dengan Baris Terbatas (2 Baris) */
+
+.webinar__title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 4px 0 !important;
+    color: var(--black-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left !important;
+}
+
+
+/* Nama Penyelenggara */
+
+.webinar__organizer {
+    font-size: 0.85rem;
+    color: #606060;
+    margin-bottom: 2px;
+}
+
+
+/* Informasi Tanggal dan Jam */
+
+.webinar__info {
+    font-size: 0.8rem;
+    color: #606060;
+}
+
+
+/* Container Form Pencarian di Header */
+
+#header-search-form.nav__search {
+    display: flex !important;
+    align-items: center !important;
+    background-color: #f5f5f5 !important;
+    /* Warna abu terang seperti Google/YouTube */
+    padding: 6px 30px !important;
+    border-radius: 24px !important;
+    margin: 0 1.5rem !important;
+    flex: 1 !important;
+    max-width: 400px !important;
+    border: 1px solid #dfe1e5 !important;
+    transition: all 0.3s ease;
+}
+
+
+/* Efek saat kolom pencarian diklik */
+
+#header-search-form.nav__search:focus-within {
+    background-color: #ffffff !important;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28) !important;
+    border-color: rgba(223, 225, 229, 0) !important;
+}
+
+
+/* Style Input Teks */
+
+#header-search-form.nav__search input {
+    width: 100% !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    font-size: 14px !important;
+    color: #202124 !important;
+    padding: 5px 0 !important;
+}
+
+
+/* Style Tombol Ikon */
+
+#header-search-form.nav__search button {
+    background: none !important;
+    border: none !important;
+    padding: 0 0 0 8px !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    color: #5f6368 !important;
+    font-size: 1.2rem !important;
+}
+
+
+/* Responsif Mobile (Sesuai Syarat UAS Mobile-First) */
+
+@media screen and (max-width: 767px) {
+    #header-search-form.nav__search {
+        margin: 0 10px !important;
+        max-width: 180px !important;
+        padding: 4px 10px !important;
+    }
+}

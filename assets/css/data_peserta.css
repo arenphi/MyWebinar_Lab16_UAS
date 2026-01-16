@@ -1,0 +1,168 @@
+/* Container Utama */
+
+.main-content {
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+    min-height: 80vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+/* Judul Halaman */
+
+h2 {
+    color: #333;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 4px;
+    background: #775CA7;
+    /* Warna tema MyWebinar */
+    border-radius: 2px;
+}
+
+
+/* Section Per Webinar */
+
+.webinar-section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+    border: 1px solid #edf2f7;
+}
+
+
+/* Header Box Webinar */
+
+.webinar-title-box {
+    background: #fff;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #edf2f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.webinar-title-box .title {
+    font-size: 1.1rem;
+    color: #2d3748;
+}
+
+.count-badge {
+    background: #775CA7;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+/* Styling Tabel */
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+th {
+    background-color: #f8fafc;
+    color: #718096;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 1rem 1.5rem;
+    text-align: left;
+}
+
+td {
+    padding: 1rem 1.5rem;
+    vertical-align: middle;
+    color: #4a5568;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 0.95rem;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: #fcfaff;
+}
+
+
+/* Status Badge */
+
+.badge-status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #e2e8f0;
+    color: #4a5568;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+
+/* Ikon WhatsApp */
+
+.ri-whatsapp-fill {
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+.ri-whatsapp-fill:hover {
+    transform: scale(1.2);
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* Card Empty State */
+
+.card.text-center {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 12px;
+    color: #718096;
+    border: 2px dashed #e2e8f0;
+}
+
+
+/* Responsive Mobile */
+
+@media (max-width: 768px) {
+    .webinar-title-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    th,
+    td {
+        padding: 0.75rem 1rem;
+    }
+}

@@ -1,0 +1,565 @@
+@media screen and (max-width: 767px) {
+    .modal {
+        display: none;
+        visibility: visible;
+        pointer-events: auto;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 10000 !important;
+        place-items: center;
+        padding: 1rem;
+        backdrop-filter: blur(4px);
+    }
+    .modal__content {
+        background-color: var(--white-color);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        width: 100%;
+        max-width: 500px;
+        max-height: 80vh;
+        overflow-y: auto;
+        position: relative;
+    }
+}
+
+.modal__group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.modal__group input,
+.modal__group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal__buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn--submit {
+    background: #775CA7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn--cancel {
+    background: #eee;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Badge Sertifikat */
+
+.cert-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #27ae60;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+/* Modal Z-Index Fix */
+
+
+/* Update pada style.css */
+
+.modal.active {
+    display: grid !important;
+}
+
+.modal__content {
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+
+/*========== RESPONSIVE MOBILE FIX (YouTube Style) ==========*/
+
+@media screen and (max-width: 767px) {
+    .nav {
+        height: 5rem;
+        justify-content: center;
+    }
+    .nav__logo,
+    .nav__toggle,
+    .nav__burger,
+    .nav__close {
+        display: none !important;
+    }
+    .nav__menu {
+        position: static !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-color: transparent !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    .nav__data {
+        display: flex !important;
+        justify-content: center;
+        /* Membuat logo ke tengah */
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    .nav__logo {
+        display: flex !important;
+        align-items: center !important;
+        width: 100%;
+    }
+    .nav__logo img {
+        display: block !important;
+        width: 40px;
+        height: auto;
+    }
+    .nav__menu,
+    .nav__toggle {
+        display: none !important;
+    }
+    /* Pastikan gambar logo memiliki ukuran */
+    .nav__list {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        height: 100%;
+        padding: 0 1rem;
+    }
+    .nav__link {
+        flex-direction: column !important;
+        font-size: 0.65rem !important;
+        gap: 3px !important;
+        color: #606060 !important;
+    }
+    .nav__link i {
+        font-size: 1.4rem !important;
+        margin: 0 !important;
+    }
+    /* Memastikan padding bawah agar konten tidak tertutup navigasi */
+    .main-content {
+        padding-top: 5rem !important;
+        padding-bottom: 6rem !important;
+    }
+    /* 1. Paksa Container Utama Jadi Flex Vertikal */
+    main.main.container.main-content {
+        padding-top: 5.1rem !important;
+    }
+    container.main-content {
+        padding-top: 5.1rem !important;
+    }
+    body,
+    .main-content {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden;
+    }
+    .container,
+    .webinar__container {
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin: 0 !important;
+    }
+    .webinar__container {
+        width: 100% !important;
+        /* Menghapus batasan lebar */
+        padding: 0 !important;
+        /* Menghapus gap kiri-kanan */
+        margin: 0 !important;
+    }
+    .webinar.section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .webinar__content {
+        width: 100%;
+        margin-bottom: 2rem;
+        /* Jarak antar postingan */
+    }
+    .webinar__container.grid {
+        display: flex !important;
+        flex-direction: column !important;
+        /* Susun card ke bawah */
+        gap: 1.5rem !important;
+        padding: 0 0 5rem 0 !important;
+    }
+    /* 2. Reset Semua Card */
+    .webinar__card {
+        display: flex !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+        background-color: var(--white-color);
+        margin-bottom: 0.5rem;
+        flex-direction: column;
+    }
+    .webinar__card:active {
+        background-color: rgba(0, 0, 0, 0.05) !important;
+        transition: 0.1s;
+    }
+}
+
+.webinar__image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* Standard YouTube */
+    overflow: hidden;
+}
+
+.webinar__img {
+    width: 100% !important;
+    height: 100%;
+    display: block;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+
+/* Judul dan Meta Info Tetap Tumpuk Vertikal */
+
+.webinar__text-container {
+    min-width: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: left !important;
+}
+
+.webinar__title {
+    font-size: 0.85rem !important;
+    margin: 0 0 4px 0 !important;
+}
+
+.webinar__organizer,
+.webinar__info {
+    font-size: 0.75rem !important;
+}
+
+@media screen and (max-width: 767px) {}
+
+
+/*========== MOBILE FOOTER & HEADER TOGGLE ==========*/
+
+
+/* Sembunyikan footer di desktop */
+
+.footer-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    /* 2. Beri ruang di atas karena header hilang & ruang di bawah agar konten tidak tertutup footer */
+    .main-content {
+        padding-top: 1rem !important;
+        padding-bottom: 5rem !important;
+    }
+    /* 3. Aktifkan Footer di Mobile */
+    .footer-mobile {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4.5rem;
+        background-color: #121212;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+    }
+    .footer__nav {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .footer__list {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .footer__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #f5f5f5;
+        font-size: 0.7rem;
+        gap: 4px;
+        transition: 0.3s;
+    }
+    .footer__link i {
+        font-size: 1.5rem;
+    }
+    /* Tombol Buat Khusus */
+    .footer__add-btn i {
+        font-size: 2.2rem;
+        color: #775CA7;
+    }
+    /* Foto Profil di Footer */
+    .footer__img-profile {
+        width: 24px;
+        height: 24px;
+        flex-direction: column;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    /* Feedback saat diklik */
+    .footer__link:active {
+        color: #775CA7;
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* 1. Reset container utama detail agar mepet pinggir */
+    .detail__container {
+        grid-template-columns: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        gap: 0 !important;
+    }
+    /* 2. Buat Poster Webinar Full Width */
+    .detail__image {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        /* Hilangkan lengkungan agar rapet */
+    }
+    .detail__img {
+        width: 100% !important;
+        border-radius: 0 !important;
+        display: block;
+    }
+    /* 3. Beri padding kembali HANYA untuk teks agar tidak menempel ke layar */
+    .detail__data,
+    .detail__description,
+    .diskusi__section,
+    .registration-form__container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        width: 100% !important;
+    }
+    /* 4. Pastikan form pendaftaran tidak pecah */
+    .registration-form__container {
+        margin: 2rem 1rem !important;
+        /* Beri jarak sedikit dari pinggir khusus area form */
+        width: calc(100% - 2rem) !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* 1. RESET CONTAINER UTAMA (Menghilangkan Gap Kiri Kanan) */
+    .detail__grid {
+        grid-template-columns: 1fr !important;
+        /* Paksa jadi 1 kolom */
+        gap: 0 !important;
+        /* Hilangkan jarak antar grid */
+        margin-top: 0 !important;
+        width: 100% !important;
+    }
+    /* 2. POSTER / PLAYER FULL WIDTH */
+    .webinar__player {
+        border-radius: 0 !important;
+        width: 100% !important;
+        /* Lebar penuh layar */
+        margin-top: 5.1rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .webinar__player img {
+        border-radius: 0 !important;
+        opacity: 1;
+        /* Poster lebih jelas di mobile */
+    }
+    /* 3. SIDEBAR (Form Pendaftaran) - Tidak Lagi Sticky */
+    .side__card {
+        position: static !important;
+        /* Matikan sticky agar ikut scroll */
+        width: 100% !important;
+        box-shadow: none !important;
+        /* Opsional: hilangkan bayangan agar lebih flat */
+        border-radius: 0 !important;
+        border-top: 8px solid #f0f2f5;
+        /* Beri pemisah tebal antar section */
+        padding: 1.5rem 1rem !important;
+    }
+    /* 4. AREA INFORMASI & DESKRIPSI */
+    .info__card {
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 1.5rem 1rem !important;
+        /* Tetap beri jarak untuk teks agar tidak nabrak layar */
+        margin-top: 0 !important;
+    }
+}
+
+
+/*=============== MODAL RESIZE FOR MOBILE ===============*/
+
+@media screen and (max-width: 767px) {
+    /* 1. Backdrop Modal */
+    .modal {
+        padding: 1rem;
+        /* Memberi jarak agar modal tidak menempel ke pinggir layar HP */
+        align-items: center;
+        /* Memastikan modal muncul di tengah secara vertikal */
+    }
+    /* 2. Isi Content Modal */
+    .modal__content {
+        width: 100% !important;
+        /* Memaksa lebar memenuhi layar mobile */
+        max-width: 100% !important;
+        padding: 1.5rem 1rem;
+        border-radius: 1.25rem;
+        /* Membuat sudut lebih halus di HP */
+        max-height: 90vh;
+        /* Agar modal tidak melebihi tinggi layar dan bisa di-scroll */
+        overflow-y: auto;
+        /* Aktifkan scroll jika form sangat panjang */
+    }
+    /* 3. Penyesuaian Input di Dalam Modal */
+    .modal__group {
+        flex-direction: column;
+        /* Ubah layout dari samping-sampingan menjadi atas-bawah */
+        gap: 15px;
+        padding: 0;
+    }
+    .modal__flex-row {
+        width: 100% !important;
+        flex-direction: column;
+        /* Input tanggal/jam jadi bertumpuk vertical */
+        gap: 10px;
+    }
+    .modal__input-full,
+    .modal__flex-item,
+    .ks {
+        width: 100% !important;
+        /* Pastikan semua input lebar penuh */
+    }
+    /* 4. Judul Modal */
+    .modal__title {
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+    /* 5. Tombol Close (Jika ada) */
+    .modal__close {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+
+/* SEARCH IN HEADER */
+
+.nav__search {
+    display: flex;
+    align-items: center;
+    background-color: var(--body-color);
+    padding: 5px 15px;
+    border-radius: 2rem;
+    margin: 0 1rem;
+    flex: 1;
+    /* Membuat search box mengambil ruang yang tersedia */
+    max-width: 400px;
+}
+
+.nav__search input {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 0.85rem;
+    font-family: var(--body-font);
+}
+
+.nav__search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--purple-color);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Penyesuaian Mobile */
+
+
+/* --- HEADER RESPONSIVE OPTIMIZATION --- */
+
+.nav__data {
+    display: flex;
+    flex-wrap: wrap;
+    /* Mengizinkan elemen turun ke baris baru */
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+
+/* Pengaturan Search Bar */
+
+#header-search-form.nav__search {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: #f0f2f5;
+    padding: 8px 15px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+
+/*========== FIX HEADER MOBILE SEJAJAR (LOGO KIRI - SEARCH KANAN) ==========*/
+
+@media screen and (max-width: 767px) {
+    /* Container Utama */
+    .nav__data {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        /* Mencegah turun ke baris baru */
+        align-items: center !important;
+        justify-content: flex-start !important;
+        /* Mulai dari kiri */
+        gap: 8px !important;
+        height: 60px !important;
+        width: 100% !important;
+    }
+}
