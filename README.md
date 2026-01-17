@@ -47,16 +47,17 @@ Sesuai dengan ketentuan struktur directory lengkap:
 
 ```text
 /project-uas/
-├── /assets/             # CSS (Framework & Custom), Fonts, dan JS
-├── /includes/           # Koneksi database, Header, dan Footer (Modular)
-├── /models/             # Class PHP untuk implementasi OOP
-├── /uploads/            # Penyimpanan Poster dan Template Sertifikat
-├── /views/              # UI/UX MyWebinar
-    ├── detail.php       # Detail webinar & form pendaftaran
-    ├── login.php        # Autentikasi User & Admin
+├── /assets/                 # CSS (Framework & Custom), Fonts, dan JS
+├── /controllers/               # Koneksi database, Header, dan Footer (Modular)
+├── /includes/               # Koneksi database, Header, dan Footer (Modular)
+├── /models/                 # Class PHP untuk implementasi OOP
+├── /uploads/                # Penyimpanan Poster dan Template Sertifikat
+├── /views/                  # UI/UX MyWebinar
+    ├── detail.php           # Detail webinar & form pendaftaran
+    ├── login.php            # Autentikasi User & Admin
     └── unduh_sertifikat.php # Script generate sertifikat otomatis
-├── .htaccess            # Konfigurasi Clean URL (Routing)
-├── index.php            # Halaman utama (Beranda)
+├── .htaccess                # Konfigurasi Clean URL (Routing)
+├── index.php                # Halaman utama (Beranda)
 
 ```
 
@@ -96,7 +97,4 @@ Penjelasan fitur dan cara kerja aplikasi dapat dilihat melalui link berikut:
 
 ## 🌐 Demo Aplikasi
 
-Jika tersedia, Anda dapat mengakses demo aplikasi secara online:
-
-* 
 **Link Demo**: http://mywebinar.kesug.com
